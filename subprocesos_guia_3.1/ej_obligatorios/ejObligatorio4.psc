@@ -25,13 +25,33 @@ FinAlgoritmo
 
 SubProceso codifi(frase Por Referencia)
 	Definir i Como Entero
+	Definir arroba,hastag,pesos,porcentaje,asterisco, frasecodi Como Caracter
+	arroba = "@"
+	hastag = "#"
+	pesos = "$"
+	porcentaje = "%"
+	asterisco = "*"
+	frasecodi = ""
 	
 	Para i = 0 Hasta Longitud(frase) Hacer
-		Segun Subcadena(frase,i,i) hacer	
-			"a":
-				frase = Concatenar(frase,"@")
+		Segun Subcadena(frase,i,i) Hacer
+			"a","A":
+				frasecodi = Concatenar(frasecodi,arroba)
+			"e","E":
+				frasecodi = Concatenar(frasecodi,hastag)
+			"i","I":
+				frasecodi = Concatenar(frasecodi,pesos)
+			"o","O":
+				frasecodi = Concatenar(frasecodi,porcentaje)
+			"u","U":
+				frasecodi = Concatenar(frasecodi,asterisco)
+				
+			De Otro Modo:
+				frasecodi = frasecodi + Subcadena(frase,i,i)
 		FinSegun
 	FinPara
-	
+	frase = frasecodi
 FinSubProceso
+
+
 	
