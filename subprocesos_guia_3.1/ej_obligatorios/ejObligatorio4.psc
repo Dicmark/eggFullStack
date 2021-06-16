@@ -29,7 +29,7 @@ SubProceso codifi(frase Por Referencia)
 	Para i = 0 Hasta Longitud(frase) Hacer
 		Segun Subcadena(frase,i,i) hacer	
 			"a":
-				frase = "@"
+				frase = Concatenar(frase,"@")
 		FinSegun
 	FinPara
 	
